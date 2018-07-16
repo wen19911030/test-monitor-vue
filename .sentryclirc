@@ -1,0 +1,8 @@
+[defaults]
+// url = https://sentry.io/
+<!-- 此处可以从你的sentry.io的全路径看出，如：https://sentry.io/此处是你的org/此处是你的project/ -->
+org = '5b94071dc50c'
+project = 'vue'
+
+[auth]
+token = 'e908b6d9d29343fe9f5ecade6536ebc5370c2a58f22e47749c35c1323f8f739b'

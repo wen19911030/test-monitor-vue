@@ -10,7 +10,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
-const SentryPlugin = require('webpack-sentry-plugin');
+const SentryPlugin = require('@sentry/webpack-plugin');
 
 const env = require('../config/prod.env')
 
@@ -117,7 +117,6 @@ const webpackConfig = merge(baseWebpackConfig, {
             include: './dist',
             release: process.env.RELEASE_VERSION,
             configFile: 'sentry.properties',
-            urlPrefix: '~/TechPage/', // 如果不需要也可以不传这个参
         }, require('../sentry.conf.js')),
     ]
 })
